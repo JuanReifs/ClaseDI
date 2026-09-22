@@ -1,7 +1,11 @@
 package model;
 
 
-public abstract class Task {
+import java.io.Serializable;
+
+public abstract class Task implements Serializable {
+
+    private final static Long serialVersionUID = 1234L;
 
     // una tarea tiene siempre una persona asociada (que tiene nombre, apellido, correo, dni)
 
@@ -72,5 +76,10 @@ public abstract class Task {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+
+    public String toCSV(){
+        return String.format("%d,%s,%d,%s,%s",
+                id,title,level,person.getEmail(),getClass().getName());
     }
 }
