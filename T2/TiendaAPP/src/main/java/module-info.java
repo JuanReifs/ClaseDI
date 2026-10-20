@@ -1,4 +1,4 @@
-module org.example.plantilla {
+module org.example.tiendaapp {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
@@ -11,6 +11,14 @@ module org.example.plantilla {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens org.example.plantilla to javafx.fxml;
-    exports org.example.plantilla;
+    requires java.sql;
+    requires java.desktop;
+
+
+    opens org.example.tiendaapp to javafx.fxml;
+    exports org.example.tiendaapp;
+    exports org.example.tiendaapp.controller;
+    opens org.example.tiendaapp.controller to javafx.fxml;
+    exports org.example.tiendaapp.data;
+    opens org.example.tiendaapp.data to javafx.fxml, java.sql;
 }

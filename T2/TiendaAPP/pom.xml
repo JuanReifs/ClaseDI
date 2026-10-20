@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>plantilla</artifactId>
+    <artifactId>TiendaAPP</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>plantilla</name>
+    <name>TiendaAPP</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -133,7 +133,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example.plantilla/org.example.plantilla.HelloApplication</mainClass>
+                            <mainClass>org.example.tiendaapp/org.example.tiendaapp.TiendaApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
